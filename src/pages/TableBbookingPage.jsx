@@ -11,7 +11,8 @@ const TableBbookingPage = () => {
         </div>
 
         <form action="" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
-          <div>
+          <div className="flex gap-3">    
+           <div>
             <label htmlFor="fullname" className="sr-only">
               Full Name
             </label>
@@ -23,7 +24,22 @@ const TableBbookingPage = () => {
                 placeholder="Full Name"
               />
             </div>
+           </div>
+           <div>
+            <label htmlFor="tel" className="sr-only">
+              Mobile
+            </label>
+
+            <div className="relative">
+              <input
+                type="tel"
+                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Enter Mobile Number"
+              />
+            </div>
           </div>
+          </div>
+     
           <div>
             <label htmlFor="email" className="sr-only">
               Email
@@ -38,21 +54,9 @@ const TableBbookingPage = () => {
             </div>
           </div>
           
-          <div>
-            <label htmlFor="tel" className="sr-only">
-              Mobile
-            </label>
-
-            <div className="relative">
-              <input
-                type="tel"
-                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                placeholder="Enter Mobile Number"
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="tel" className="sr-only">
+          <div className="flex gap-3">
+          <div className="w-6/12">
+            <label htmlFor="date" className="sr-only">
               Date Of Booking
             </label>
 
@@ -64,8 +68,8 @@ const TableBbookingPage = () => {
               />
             </div>
           </div>
-          <div>
-            <label htmlFor="tel" className="sr-only">
+          <div className="w-6/12">
+            <label htmlFor="time" className="sr-only">
               Time Of Booking
             </label>
 
@@ -77,6 +81,9 @@ const TableBbookingPage = () => {
               />
             </div>
           </div>
+          </div>
+          
+          <div className="flex gap-3">
           <div>
             <label htmlFor="tel" className="sr-only">
               Number of Members
@@ -103,6 +110,8 @@ const TableBbookingPage = () => {
               />
             </div>
           </div>
+          </div>
+          
           <div>
             <label htmlFor="message" className="sr-only">
               Message
@@ -116,7 +125,7 @@ const TableBbookingPage = () => {
               />
             </div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <button
               type="submit"
               className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"

@@ -11,7 +11,8 @@ const PartyBookingPage = () => {
         </div>
 
         <form action="" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
-          <div>
+          <div className="flex gap-3">
+            <div>
             <label htmlFor="fullname" className="sr-only">
               Full Name
             </label>
@@ -21,19 +22,6 @@ const PartyBookingPage = () => {
                 type="text"
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Full Name"
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="email" className="sr-only">
-              Email
-            </label>
-
-            <div className="relative">
-              <input
-                type="email"
-                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                placeholder="Enter email"
               />
             </div>
           </div>
@@ -50,7 +38,24 @@ const PartyBookingPage = () => {
               />
             </div>
           </div>
+          </div>
+              
           <div>
+            <label htmlFor="email" className="sr-only">
+              Email
+            </label>
+
+            <div className="relative">
+              <input
+                type="email"
+                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Enter email"
+              />
+            </div>
+          </div>
+
+          <div className="flex gap-3">
+          <div className="w-6/12">
             <label htmlFor="tel" className="sr-only">
               Date Of Booking
             </label>
@@ -63,7 +68,7 @@ const PartyBookingPage = () => {
               />
             </div>
           </div>
-          <div>
+          <div className="w-6/12">
             <label htmlFor="tel" className="sr-only">
               Time Of Booking
             </label>
@@ -76,6 +81,9 @@ const PartyBookingPage = () => {
               />
             </div>
           </div>
+          </div>
+          
+          <div className="flex gap-3">
           <div>
             <label htmlFor="tel" className="sr-only">
               Number of Members
@@ -102,6 +110,8 @@ const PartyBookingPage = () => {
               />
             </div>
           </div>
+          </div>
+          
           <div>
             <label htmlFor="message" className="sr-only">
               Message
@@ -168,7 +178,7 @@ const PartyBookingPage = () => {
               </label>
             </div>
           </fieldset>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <button
               type="submit"
               className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
