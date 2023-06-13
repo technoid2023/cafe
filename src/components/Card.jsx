@@ -14,9 +14,9 @@ const Card = ({ title, image }) => {
 
       <div className="relative flex items-start justify-between p-4 sm:p-6 lg:p-8">
         <div className="sm:pt-18 pt-12 text-white lg:pt-24">
-          <h3 className="text-xl font-bold sm:text-2xl">{title}</h3>
+          <h3 className="text-3xl font-bold sm:text-5xl">{title}</h3>
 
-          <p className="text-sm">Try Now</p>
+          <p className="text-2xl">Try Now</p>
         </div>
 
         <span className="inline-flex items-center gap-0.5 rounded-full bg-black px-2 py-1 text-xs font-semibold text-white">

@@ -175,14 +175,6 @@ export default function Header() {
             Contact Us
           </Link>
         </Popover.Group>
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            to="#"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div> */}
       </nav>
       <Dialog
         as="div"
@@ -241,24 +233,42 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure> */}
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                  Menu
-                </a>
-                <a
-                  href="#"
+                  Home
+                </Link>
+                <Link
+                  to="/about-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Contact Us
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   About Us
-                </a>
+                </Link>
+                <Link
+                  to="/menu"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                  Menu
+                </Link>
+                <Link
+                  to="/bookings"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                  Booking
+                </Link>
+                <Link
+                  to="/contact-us"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                  Contact Us
+                </Link>
+                
               </div>
             </div>
           </div>

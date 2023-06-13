@@ -16,11 +16,11 @@ const BookingCard = ({ name, route, image }) => {
         className="object-cover text-white relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
       >
         <div className="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-          <h2 className="mt-4 text-xl font-medium sm:text-2xl">{name}</h2>
+          <h2 className="mt-4 text-xl font-medium sm:text-4xl">{name}</h2>
         </div>
 
         <div className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
-          <h3 className="mt-4 text-xl font-medium sm:text-2xl">{name}</h3>
+          <h3 className="mt-4 text-xl font-medium sm:text-4xl">{name}</h3>
 
           <p className="mt-4 text-sm sm:text-base">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,

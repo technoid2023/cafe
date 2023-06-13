@@ -48,9 +48,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-10 p-10">
+      <div className="flex flex-wrap justify-center gap-10 p-10">
         {cards.map(({ title, def }) => (
-          <div className="relative block rounded-sm border-t-4 border-yellow-600 p-4 shadow-xl sm:p-6 lg:p-8 w-80 aspect-square">
+          <div className="relative block rounded-sm border-t-4 border-yellow-600 p-4 shadow-xl sm:p-6 lg:p-8 w-60 aspect-square">
             <div className="flex items-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
