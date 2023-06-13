@@ -72,6 +72,38 @@ const HomePage = () => {
           </div>
         ))}
       </div>
+      
+  <section className="bg-gray-50">
+  <div className="mx-auto px-4 py-10 lg:flex lg:items-center">
+    <div className="mx-auto max-w-xl text-center">
+      <h1 className="text-3xl font-extrabold sm:text-5xl">
+        Don't waste your time !
+        <strong className="font-extrabold text-yellow-300  sm:block">
+          Book now.
+        </strong>
+      </h1>
+      <p className="mt-4 sm:text-xl/relaxed">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
+        tenetur fuga ducimus numquam ea!
+      </p>
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <Link to="/bookings/table-booking"
+          className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+          href="/get-started"
+        >
+          Book a Table
+        </Link>
+        <Link to="/bookings/party-booking"
+          className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+          href="/about"
+        >
+          Party Booking
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
     </>
   );
 };

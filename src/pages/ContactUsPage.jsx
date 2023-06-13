@@ -5,19 +5,20 @@ const ContactUsPage = () => {
     <>
       <h1 className="text-2xl font-bold sm:text-3xl text-center">Contact Us</h1>
       <div className="flex flex-col gap-10 justify-center items-center lg:flex-row lg:justify-around py-5">
-        <div>
+        <div className="w-full lg:w-6/12 overflow-hidden flex flex-col items-center justify-center">
           <h1 className="text-lg font-bold text-center">
             Phone Number- 9876543211
           </h1>
           <h1 className="text-lg font-bold text-center">
             Email- example@domain.com
           </h1>
+
           <iframe
             title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.6193195499686!2d88.41285357497229!3d22.443349679583992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0272166e4cb263%3A0x27f12170efd9ddee!2sFuture%20Institute%20of%20Engineering%20and%20Management!5e0!3m2!1sen!2sin!4v1686409941816!5m2!1sen!2sin"
             width={600}
             height={450}
-            style={{ border: 0 }}
+            style={{ border: 10 }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -60,7 +61,7 @@ const ContactUsPage = () => {
                 />
               </div>
             </div>
-            
+
             <div>
               <label htmlFor="message" className="sr-only">
                 Message
