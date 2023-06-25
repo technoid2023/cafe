@@ -27,7 +27,7 @@ const HomePage = () => {
     <>
       <PopUp />
       <div
-        className="h-[600px] object-cover bg-cover bg-center relative -z-20"
+        className="h-[600px] object-cover bg-cover bg-center relative"
         style={{
           backgroundImage: `url(${Resturant})`,
         }}
