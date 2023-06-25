@@ -1,9 +1,7 @@
-import {  useState } from "react";
-import { Dialog,  Popover } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { useState } from "react";
+import { Dialog, Popover } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Logo from "../assests/logo.jpg";
 
 import { Link } from "react-router-dom";
 
@@ -13,15 +11,14 @@ export default function Header() {
   return (
     <header className="bg-[#f2f2f2]">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-1"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <p className="text-3xl font-semibold">Cafe</p>
-          </Link>
-        </div>
+        <Link to="/" className="-m-1.5 p-1.5 flex lg:flex-1 items-center gap-2">
+          <img src={Logo} alt="logo" className="w-16" />
+          <h1 className="text-green-400 text-2xl font-black">Veggie Corner</h1>
+        </Link>
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -47,9 +44,15 @@ export default function Header() {
           </Link>
           <Link
             className="text-sm font-semibold leading-6 text-gray-900"
-            to="bookings"
+            to="booking"
           >
             Booking
+          </Link>
+          <Link
+            className="text-sm font-semibold leading-6 text-gray-900"
+            to="order"
+          >
+            Order
           </Link>
           <Link
             className="text-sm font-semibold leading-6 text-gray-900"
@@ -119,7 +122,6 @@ export default function Header() {
                 >
                   Contact Us
                 </Link>
-                
               </div>
             </div>
           </div>

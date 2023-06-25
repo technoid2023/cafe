@@ -1,6 +1,7 @@
 import React from "react";
 import Resturant from "../assests/bg-hero.jpg";
 import { Link } from "react-router-dom";
+import PopUp from "../components/PopUp";
 
 const cards = [
   {
@@ -24,8 +25,9 @@ const cards = [
 const HomePage = () => {
   return (
     <>
+      <PopUp />
       <div
-        className="h-[600px] object-cover bg-cover bg-center"
+        className="h-[600px] object-cover bg-cover bg-center relative"
         style={{
           backgroundImage: `url(${Resturant})`,
         }}
@@ -37,12 +39,12 @@ const HomePage = () => {
             </span>
             <Link
               className="group relative inline-block focus:outline-none focus:ring"
-              to="/menu"
+              to="/order"
             >
               <span className="absolute inset-0 translate-x-0 translate-y-0 bg-yellow-300 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"></span>
 
               <span className="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest">
-                Check Menus !
+                Order Online !
               </span>
             </Link>
           </div>
@@ -72,38 +74,36 @@ const HomePage = () => {
           </div>
         ))}
       </div>
-      
-  <section className="bg-gray-50">
-  <div className="mx-auto px-4 py-10 lg:flex lg:items-center">
-    <div className="mx-auto max-w-xl text-center">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">
-        Don't waste your time !
-        <strong className="font-extrabold text-yellow-300  sm:block">
-          Book now.
-        </strong>
-      </h1>
-      <p className="mt-4 sm:text-xl/relaxed">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-        tenetur fuga ducimus numquam ea!
-      </p>
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <Link to="/bookings/table-booking"
-          className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-          href="/get-started"
-        >
-          Book a Table
-        </Link>
-        <Link to="/bookings/party-booking"
-          className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-          href="/about"
-        >
-          Party Booking
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
 
+      <section className="bg-gray-50">
+        <div className="mx-auto px-4 py-10 lg:flex lg:items-center">
+          <div className="mx-auto max-w-xl text-center">
+            <h1 className="text-3xl font-extrabold sm:text-5xl">
+              Don't waste your time !
+              <strong className="font-extrabold text-yellow-300  sm:block">
+                Order now.
+              </strong>
+            </h1>
+            <p className="mt-4 sm:text-xl/relaxed">
+              Order from Swiggy Or Zomato
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                to="/order"
+                className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+              >
+                Order from Swiggy
+              </Link>
+              <Link
+                to="/order"
+                className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+              >
+                Order from Zomato
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

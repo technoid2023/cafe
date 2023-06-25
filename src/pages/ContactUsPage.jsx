@@ -1,6 +1,33 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+const schema = yup
+  .object({
+    name: yup.string().required("Full Name is required"),
+    email: yup
+      .string()
+      .required("Email is required")
+      .matches(/\S+@\S+\.\S+/, "Email is not valid"),
+    tel: yup.string().required("Mobile Number is required"),
+    message: yup.string().required("Message is required"),
+  })
+  .required();
 
 const ContactUsPage = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = async ({ name, email, password, message }) => {
+    console.log(name, email, password, message);
+  };
   return (
     <>
       <h1 className="text-2xl font-bold sm:text-3xl text-center">Contact Us</h1>
@@ -34,18 +61,43 @@ const ContactUsPage = () => {
             </p>
           </div>
 
-          <form action="" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="mx-auto mb-0 mt-8 max-w-md space-y-4"
+          >
             <div>
               <label htmlFor="fullname" className="sr-only">
                 Full Name
               </label>
-
               <div className="relative">
                 <input
+                  id="name"
                   type="text"
                   className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                   placeholder="Full Name"
+                  {...register("name")}
                 />
+                <p className="text-red-500 font-semibold">
+                  {errors.name?.message}
+                </p>
+              </div>
+            </div>
+            <div>
+              <label htmlFor="tel" className="sr-only">
+                Mobile
+              </label>
+
+              <div className="relative">
+                <input
+                  id="tel"
+                  type="tel"
+                  className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                  placeholder="Enter Mobile Number"
+                  {...register("tel")}
+                />
+                <p className="text-red-500 font-semibold">
+                  {errors.tel?.message}
+                </p>
               </div>
             </div>
             <div>
@@ -55,10 +107,15 @@ const ContactUsPage = () => {
 
               <div className="relative">
                 <input
+                  id="email"
                   type="email"
                   className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                   placeholder="Enter email"
+                  {...register("email")}
                 />
+                <p className="text-red-500 font-semibold">
+                  {errors.email?.message}
+                </p>
               </div>
             </div>
 
@@ -69,10 +126,15 @@ const ContactUsPage = () => {
 
               <div className="relative">
                 <textarea
+                  id="message"
                   type="text"
                   className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                   placeholder="Write a message"
+                  {...register("message")}
                 />
+                <p className="text-red-500 font-semibold">
+                  {errors.message?.message}
+                </p>
               </div>
             </div>
 

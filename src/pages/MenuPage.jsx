@@ -8,12 +8,13 @@ import Italian from "../assests/menu/italian/Bruschetta.jpg";
 import Snacks from "../assests/menu/snacks/snacks.jpeg";
 
 const menu = [
-  { title: "Veg", image: Veg },
-  { title: "Non-Veg", image: NonVeg },
-  { title: "Bengali", image: Bengali },
-  { title: "Chinese", image: Chinese },
-  { title: "Italian", image: Italian },
-  { title: "Snacks", image: Snacks },
+  { title: "Starter", image: Veg },
+  { title: "Soup", image: NonVeg },
+  { title: "Veggie Beverages", image: Bengali },
+  { title: "Roll", image: Chinese },
+  { title: "Noodles", image: Italian },
+  { title: "Gravy", image: Snacks },
+  { title: "Fried Rice", image: Snacks },
 ];
 
 const MenuPage = () => {
