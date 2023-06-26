@@ -34,7 +34,7 @@ const HomePage = () => {
       >
         <div class="w-full h-full flex justify-center items-center backdrop-brightness-50">
           <div className="w-[596px] flex justify-center items-center">
-            <span class="text-white text-4xl w-1/2 text-center">
+            <span class="text-white text-4xl w-5/12 text-center">
               Enjoy Your Meal !
             </span>
             <Link
@@ -90,13 +90,13 @@ const HomePage = () => {
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
                 to="/order"
-                className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                className="block w-full rounded bg-[#f47c18] px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
               >
                 Order from Swiggy
               </Link>
               <Link
                 to="/order"
-                className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+                className="block w-full rounded px-12 py-3 text-sm font-medium bg-red-500 text-white shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
               >
                 Order from Zomato
               </Link>

@@ -95,28 +95,35 @@ export default function Header() {
                   Home
                 </Link>
                 <Link
-                  to="/about-us"
+                  to="about-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   About Us
                 </Link>
                 <Link
-                  to="/menu"
+                  to="order"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                  Order
+                </Link>
+                <Link
+                  to="menu"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Menu
                 </Link>
                 <Link
-                  to="/bookings"
+                  to="booking"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Booking
                 </Link>
                 <Link
-                  to="/contact-us"
+                  to="contact-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >

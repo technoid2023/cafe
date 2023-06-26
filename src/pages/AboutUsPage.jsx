@@ -2,7 +2,7 @@ import React from "react";
 import Resturant from "../assests/about-us/resturant.webp";
 import Team from "../assests/about-us/team.jpeg";
 import { Link } from "react-router-dom";
-// import Review from "../components/Review";
+
 const AboutUsPage = () => {
   return (
     <>
@@ -26,7 +26,7 @@ const AboutUsPage = () => {
           <img
             alt="Student"
             src={Resturant}
-            className="h-28 w-full object-cover sm:h-4/6"
+            className="md:h-10/12 lg:w-full lg:object-cover h-4/6"
           />
         </div>
       </section>
@@ -36,7 +36,7 @@ const AboutUsPage = () => {
           <img
             alt="Student"
             src={Team}
-            className="h-28 w-full object-cover sm:h-4/6"
+            className="md:h-10/12 md:w-full md:object-cover h-4/6 "
           />
         </div>
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">

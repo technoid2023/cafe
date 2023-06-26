@@ -1,20 +1,21 @@
 import React from "react";
 import Card from "../components/Card";
-import Veg from "../assests/menu/veg/Paneer.webp";
-import NonVeg from "../assests/menu/non-veg/Chicken65.webp";
-import Bengali from "../assests/menu/bengali/bengali.jpeg";
-import Chinese from "../assests/menu/chinese/DimSums.webp";
-import Italian from "../assests/menu/italian/Bruschetta.jpg";
-import Snacks from "../assests/menu/snacks/snacks.jpeg";
+import Starter from "../assests/menu/starter/maxresdefault.jpg";
+import Soup from "../assests/menu/soup/unnamed.jpg";
+import VeggieBeverages from "../assests/menu/veggie/mango-milkshake-4-500x500.webp";
+import Roll from "../assests/menu/roll/Kolkata-Style-Egg-Roll.jpg";
+import Noodles from "../assests/menu/noodles/veg-noodles-vegetable-noodles-recipe.jpg";
+import Gravy from "../assests/menu/gravy/chicken-gravy-recipe-indian-gravy-500x500.jpg";
+import FriedRice from "../assests/menu/friedrice/5c54d05cca6ab7802eab031c_fried-rice-website-thumbnail-_ddbiaa.png";
 
 const menu = [
-  { title: "Starter", image: Veg },
-  { title: "Soup", image: NonVeg },
-  { title: "Veggie Beverages", image: Bengali },
-  { title: "Roll", image: Chinese },
-  { title: "Noodles", image: Italian },
-  { title: "Gravy", image: Snacks },
-  { title: "Fried Rice", image: Snacks },
+  { title: "Starter", image: Starter },
+  { title: "Soup", image: Soup },
+  { title: "Veggie Beverages", image: VeggieBeverages },
+  { title: "Roll", image: Roll },
+  { title: "Noodles", image: Noodles },
+  { title: "Gravy", image: Gravy },
+  { title: "Fried Rice", image: FriedRice },
 ];
 
 const MenuPage = () => {

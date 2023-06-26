@@ -1,6 +1,6 @@
 import React from "react";
 // import MenuCard from "../components/MenuCard";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import { menu } from "../lib/menu";
 import starter from "../assests/menu/starter/st.jpeg";
 import soup from "../assests/menu/soup/s.jpeg";
@@ -33,7 +33,7 @@ const MoreMenu = () => {
   const substringToRemove = "/menu/";
   const newString = st.replace(substringToRemove, "");
   return (
-    <div className="flex justify-center flex-wrap gap-8 mt-4 p-5">
+    <div className="flex flex-col items-center justify-center flex-wrap gap-8 mt-4 p-5">
       {/* {menu.map(({ title, image, name, price }) => (
         <MenuCard title={title} image={image} name={name} price={price} />
       ))} */}
@@ -49,6 +49,16 @@ const MoreMenu = () => {
         }
         alt=""
       />
+      <Link
+        className="group relative inline-block focus:outline-none focus:ring"
+        to="/order"
+      >
+        <span className="absolute inset-0 translate-x-0 translate-y-0 bg-yellow-300 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"></span>
+
+        <span className="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest">
+          Order Now
+        </span>
+      </Link>
     </div>
   );
 };
